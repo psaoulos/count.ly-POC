@@ -11,7 +11,6 @@ export function incrementEvent(name, step = 1) {
 
 export function recordView(name) {
   try {
-    console.log('recording')
     Countly.recordView(name);
   } catch (error) {
     console.log('Countly recordView error', JSON.stringify(error))
