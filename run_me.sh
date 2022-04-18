@@ -12,12 +12,12 @@ export GROUP_ID=$(id -g);
 #     source .env
 # fi
 
-# cd demo_web_app
-# npm i
-# npm run build
-# cd ../demo_web_app_backend
-# npm i
-# cd ..
+cd demo_web_app
+npm i
+npm run build
+cd ../demo_web_app_backend
+npm i
+cd ..
 
 echo "Starting Containers!"
 # docker container stop $(docker container ls -aq)

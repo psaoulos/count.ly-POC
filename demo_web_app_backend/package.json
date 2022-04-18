@@ -1,16 +1,16 @@
 {
-    "name": "server",
+    "name": "demo_web_app_backend",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
     "scripts": {
-      "start": "node index.js",
-      "devStart": "nodemon index.js"
+        "start": "node index.js",
+        "devStart": "nodemon index.js"
     },
     "keywords": [],
-    "author": "",
-    "license": "ISC",
     "dependencies": {
-      "express": "^4.17.1"
+        "cors": "^2.8.5",
+        "countly-sdk-nodejs": "^21.11.0",
+        "express": "^4.17.1"
     }
-  }
+}
