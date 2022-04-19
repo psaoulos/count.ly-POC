@@ -11,6 +11,10 @@ POC of Count.ly (https://count.ly/) web/mobile app analytic self hosted solution
 ```
 3. When the startup routine has finished navigate to http://localhost , register your user
 4. Create two applications (Web/Mobile) and copy the App_Key found under each app (Settings/Applications/{Application_Given_Name}) to their corresponding files:
+<p align="center">
+<img width="534" alt="Screenshot 2022-04-19 at 1 39 27 PM" src="https://user-images.githubusercontent.com/17182558/164005049-d199cb0a-41e9-4b3d-aafa-b9eff99717c2.png">
+</p>
+
     Mobile: demo_mobile_app/src/utils/countly.js on Line 43 update App_Key (In order to run on android change localhost to docker server's IP)
     Web: demp_web_app/src/index.js on Line 13 update App_Key
     In order to simulate different Unique Users change on the same line the 123456 number simulating a UserID
