@@ -73,7 +73,7 @@ const LandingScreen = ({navigation}) => {
         Countly.enableAttribution(); // Enable to measure your marketing campaign performance by attributing installs from specific campaigns.
       }
       Countly.setStarRatingDialogTexts("Title", "Message", "Dismiss");
-      await Countly.init("countly_server_ip", "App_Key"); // Initialize the countly SDK.
+      await Countly.init("http://localhost", "fee1fffab3b646dcf236a001ebca2431b7fda47c"); // Initialize the countly SDK.
       Countly.appLoadingFinished();
       /** 
        * Push notifications settings 
@@ -85,6 +85,7 @@ const LandingScreen = ({navigation}) => {
       }); // Set callback to receive push notifications
       Countly.askForNotificationPermission(); // This method will ask for permission, enables push notification and send push token to countly server.
       Countly.start();
+      console.log('done!')
     }
   }
 

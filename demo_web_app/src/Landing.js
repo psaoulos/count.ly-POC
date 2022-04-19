@@ -8,44 +8,27 @@ function Landing() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    const requestOptions = {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: "Landing Screen" }),
-      };
-      fetch("http://localhost:3000/trackView", requestOptions)
-        .then((response) => response.json())
-        .then((data) => {
-          console.log(JSON.stringify(data));
-        });
+    window.Countly.q.push(['track_pageview',["Landing Screen"]]);
   }, []);
 
   const navigateClicked = () => {
-    const requestOptions = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ key: "Pressed Navigate" }),
-    };
-    fetch("http://localhost:3000/addEvent", requestOptions)
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(JSON.stringify(data));
-        navigate("/notlanding");
-      });
+    window.Countly.q.push([
+      "add_event",
+      {
+        key: "Pressed Navigate",
+      },
+    ]);
+    navigate("/notlanding");
   };
 
   const pointlessButtonPressed = () => {
-    const requestOptions = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ key: "Pressed pointless" }),
-    };
-    fetch("http://localhost:3000/addEvent", requestOptions)
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(JSON.stringify(data));
-        setCount(count + 1);
-      });
+    window.Countly.q.push([
+      "add_event",
+      {
+        key: "Pressed pointless",
+      },
+    ]);
+    setCount(count + 1);
   };
 
   return (

@@ -6,30 +6,17 @@ function NotLanding() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const requestOptions = {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: "Not the Landing Screen" }),
-      };
-      fetch("http://localhost:3000/trackView", requestOptions)
-        .then((response) => response.json())
-        .then((data) => {
-          console.log(JSON.stringify(data));
-        });
+    window.Countly.q.push(['track_pageview',["Not the Landing Screen"]]);
   }, []);
 
   const goBackClicked = () => {
-    const requestOptions = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ key: "Pressed Go Back" }),
-    };
-    fetch("http://localhost:3000/addEvent", requestOptions)
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(JSON.stringify(data));
-        navigate("/");
-      });
+    window.Countly.q.push([
+      "add_event",
+      {
+        key: "Pressed Go Back",
+      },
+    ]);
+    navigate("/Landing");
   };
 
   return (
