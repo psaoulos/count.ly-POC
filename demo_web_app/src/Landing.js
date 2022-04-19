@@ -25,7 +25,7 @@ function Landing() {
     window.Countly.q.push([
       "add_event",
       {
-        key: "Pressed pointless",
+        key: "Pressed Pointless",
       },
     ]);
     setCount(count + 1);

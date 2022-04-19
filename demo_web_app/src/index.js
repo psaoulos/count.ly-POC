@@ -53,6 +53,21 @@ Countly.q.push(["track_clicks"]);
 Countly.q.push(["track_links"]);
 Countly.q.push(["track_errors"]);
 
+Countly.q.push([
+  "user_details",
+  {
+    name: "Nicola Tesla",
+    username: "nicola",
+    email: "info@nicola.tesla",
+    organization: "Trust Electric Ltd",
+    phone: "+90 822 140 2546",
+    //Web URL to picture
+    picture: "http://www.trust.electric/images/people/nicola.png",
+    gender: "M",
+    byear: 1919, //birth year
+  },
+]);
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
