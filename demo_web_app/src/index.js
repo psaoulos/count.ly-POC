@@ -9,7 +9,8 @@ import NotLanding from "./NotLanding";
 
 window.Countly = Countly;
 Countly.init({
-  app_key: "279592198841457c4cf818070149ae365d668bb6",
+  device_id: "1234",
+  app_key: "App_Key",
   url: "http://localhost",
   session_update: 10,
   use_session_cookie: true,
@@ -73,8 +74,8 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="landing" element={<App />} />
-      <Route path="notlanding" element={<NotLanding />} />
+      <Route path="Landing_Screen" element={<App />} />
+      <Route path="Not_Landing_Screen" element={<NotLanding />} />
     </Routes>
   </BrowserRouter>
 );

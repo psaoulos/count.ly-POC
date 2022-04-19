@@ -92,7 +92,8 @@ const LandingScreen = ({ navigation }) => {
       Countly.setStarRatingDialogTexts("Title", "Message", "Dismiss");
       await Countly.init(
         "http://localhost",
-        "d7943a05c09ed16290dfffcc92a7a8164f1217b2"
+        "App_Key",
+        "123456"
       ); // Initialize the countly SDK.
       Countly.appLoadingFinished();
       /**
@@ -119,7 +120,6 @@ const LandingScreen = ({ navigation }) => {
       options.gender = "M";
       options.byear = 1919;
       Countly.setUserData(options);
-      console.log("done!");
     }
   };
 

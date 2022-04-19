@@ -8,7 +8,7 @@ function Landing() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    window.Countly.q.push(['track_pageview',["Landing Screen"]]);
+    window.Countly.q.push(['track_pageview','Landing Screen']);
   }, []);
 
   const navigateClicked = () => {
@@ -18,7 +18,7 @@ function Landing() {
         key: "Pressed Navigate",
       },
     ]);
-    navigate("/notlanding");
+    navigate("/Not_Landing_Screen");
   };
 
   const pointlessButtonPressed = () => {

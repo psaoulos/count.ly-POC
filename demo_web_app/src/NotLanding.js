@@ -6,7 +6,7 @@ function NotLanding() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    window.Countly.q.push(['track_pageview',["Not the Landing Screen"]]);
+    window.Countly.q.push(['track_pageview','Not the Landing Screen']);
   }, []);
 
   const goBackClicked = () => {
@@ -16,7 +16,7 @@ function NotLanding() {
         key: "Pressed Go Back",
       },
     ]);
-    navigate("/Landing");
+    navigate("/Landing_Screen");
   };
 
   return (
